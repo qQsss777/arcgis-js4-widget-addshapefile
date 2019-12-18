@@ -1,0 +1,64 @@
+@mixin addshapefile() {
+  .esri-addshapefile {
+    .esri-select{
+      display: inline-block;
+      margin-top:12px;
+      font-size: 14px;
+      }
+      .esri-select:disabled{
+        background-color: #c0c0c0;
+        border-color:#c0c0c0;
+        color: #c0c0c0;
+        }
+    .esri-button{
+        margin-top:12px;
+      }
+      .esri-button:disabled{
+        background-color: #c0c0c0;
+        border-color:#c0c0c0;
+      }
+  }
+
+  .esri-addshapefile__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .esri-addshapefile__label {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    opacity: 1;
+  }
+
+  .esri-addshapefile__input[type="file"] {
+    display: none;
+  }
+  
+  .esri-addshapefile__input-label {
+    border: 1px solid #0079c1;
+    text-align: center;
+    width: 100%;
+    margin-top:12px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+  .esri-addshapefile__group {
+    border: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    min-inline-size: unset;
+    transition: border-color 250ms;
+  }
+    .esri-addshapefile__group-label {
+      margin-bottom: 12px;
+      font-weight: bolder;
+      margin-top: 12px;
+    }
+}
+
+@if $include_AddShapefile == true {
+  @include addshapefile();
+}
